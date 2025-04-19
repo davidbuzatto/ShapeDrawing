@@ -3,7 +3,7 @@
 #include "raylib/raylib.h"
 
 // concave and convex shapes. points must be CCW.
-void DrawConcaveShape( Vector2 *points, int pointCount, Color color );
+void DrawConcaveShape( const Vector2 *points, int pointCount, Color color );
 
 // convex shapes (faster). points must be CCW.
 void DrawShape( const Vector2 *points, int pointCount, Color color );

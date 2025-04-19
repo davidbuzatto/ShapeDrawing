@@ -19,7 +19,7 @@ bool IsTriangleCCW( Vector2 a, Vector2 b, Vector2 c ) {
 }
 
 // Ear Clipping
-int TriangulatePolygon( Vector2 *points, int pointCount, Triangle *triangles, int maxTriangles ) {
+int TriangulatePolygon( const Vector2 *points, int pointCount, Triangle *triangles, int maxTriangles ) {
 
     if ( pointCount < 3 ) {
         return 0;
@@ -95,7 +95,7 @@ int TriangulatePolygon( Vector2 *points, int pointCount, Triangle *triangles, in
 
 }
 
-void DrawConcaveShape( Vector2 *points, int pointCount, Color color ) {
+void DrawConcaveShape( const Vector2 *points, int pointCount, Color color ) {
 
     Triangle triangles[128];
     int triCount = TriangulatePolygon( points, pointCount, triangles, 128 );
